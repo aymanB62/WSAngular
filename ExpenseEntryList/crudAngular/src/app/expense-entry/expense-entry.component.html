@@ -1,0 +1,88 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+   <div class="container">
+      <a class="navbar-brand" href="#">{{ title }}</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon">
+         </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+         <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+               <span class="sr-only">(current)
+               </span>
+            </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Report</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Add Expense</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</nav>
+<app-expense-entry-list></app-expense-entry-list>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+       <div class="col-lg-12 text-center" style="padding-top: 20px;">
+          <div class="container" style="padding-left: 0px; padding-right: 0px;">
+             <div class="row">
+             <div class="col-sm" style="text-align: left;"> {{ title }}
+             </div>
+             <div class="col-sm" style="text-align: right;">
+                <button type="button" class="btn btn-primary">Edit</button>
+             </div>
+             </div>
+          </div>
+          <div class="container box" style="margin-top: 10px;">
+          <div class="row">
+          <div class="col-2" style="text-align: right;">  
+             <strong><em>Item:</em></strong>
+          </div>
+          <div class="col" style="text-align: left;">
+             Pizza
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-2" style="text-align: right;">
+             <strong><em>Amount:</em></strong>
+          </div>
+          <div class="col" style="text-align: left;">
+             20
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-2" style="text-align: right;">
+             <strong><em>Category:</em></strong>
+          </div>
+          <div class="col" style="text-align: left;">
+             Food
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-2" style="text-align: right;">
+             <strong><em>Location:</em></strong>
+          </div>
+          <div class="col" style="text-align: left;">
+             Zomato
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-2" style="text-align: right;">
+             <strong><em>Spend On:</em></strong>
+          </div>
+          <div class="col" style="text-align: left;">
+             June 20, 2020
+          </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ </div>
