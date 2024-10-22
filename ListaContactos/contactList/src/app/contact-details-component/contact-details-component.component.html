@@ -1,0 +1,15 @@
+<div class="contact-detail">
+  <img [src]="contact.avatar" alt="Avatar" class="avatar-large" />
+
+  <div>
+    <h3>{{ contact.name }}</h3>
+    <p><strong>Email:</strong> {{ contact.email }}</p>
+    <p><strong>Phone:</strong> {{ contact.phone }}</p>
+    <p><strong>Website:</strong> <a [href]="contact.website">{{ contact.website }}</a></p>
+    <p><strong>Address:</strong> {{ contact.address }}</p>
+    <p><strong>Notes:</strong> {{ contact.notes }}</p>
+  </div>
+
+  <button class="btn btn-primary" (click)="editContact()">Edit</button>
+
+</div>

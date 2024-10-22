@@ -1,0 +1,13 @@
+<div class="contact-list">
+  <input type="text" class="form-control" placeholder="Type to search" [(ngModel)]="searchText" />
+
+  <ul class="list-group">
+    <li
+      *ngFor="let contact of contacts | filter:searchText"
+      class="list-group-item"
+      (click)="selectContact(contact)">
+      <img [src]="contact.avatar" alt="Avatar" class="avatar" />
+      {{ contact.name }}
+    </li>
+  </ul>
+</div>
