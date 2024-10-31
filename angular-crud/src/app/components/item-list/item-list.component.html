@@ -1,1 +1,9 @@
-<p>item-list works!</p>
+<ul class="list-group">
+  <li *ngFor="let item of items" class="list-group-item d-flex justify-content-between align-items-center">
+    {{ item.name }}
+    <div>
+      <a [routerLink]="['/items/edit', item.id]" class="btn btn-primary btn-sm me-2">Edit</a>
+      <button (click)="deleteItem(item.id)" class="btn btn-danger btn-sm">Delete</button>
+    </div>
+  </li>
+</ul>

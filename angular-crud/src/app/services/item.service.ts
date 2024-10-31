@@ -2,31 +2,36 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+export interface Item {
+  id: number;
+  name: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class ItemService {
-  private baseUrl = 'http://localhost:3000/items'; // Example API URL
+  private apiUrl = 'http://localhost:3000/api/items';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getItems(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseUrl);
+  getItems(): Observable<Item[]> {
+    return this.http.get<Item[]>(this.apiUrl);
   }
 
-  getItemById(id: number): Observable<any> {
-    return this.http.get<any>(${this.baseUrl}/${id});
+  createItem(item: Item): Observable<Item> {
+    return this.http.post<Item>(this.apiUrl, item);
   }
 
-  createItem(item: any): Observable<any> {
-    return this.http.post(this.baseUrl, item);
+  getItemById(id: number): Observable<Item> {
+    return this.http.get<Item>(`${this.apiUrl}/${id}`);
   }
 
-  updateItem(id: number, item: any): Observable<any> {
-    return this.http.put(${this.baseUrl}/${id}, item);
+  updateItem(item: Item): Observable<Item> {
+    return this.http.put<Item>(`${this.apiUrl}/${item.id}`, item);
   }
 
-  deleteItem(id: number): Observable<any> {
-    return this.http.delete(${this.baseUrl}/${id});
+  deleteItem(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }

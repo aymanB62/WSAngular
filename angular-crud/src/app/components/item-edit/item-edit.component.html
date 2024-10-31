@@ -1,1 +1,6 @@
-<p>item-edit works!</p>
+<form (ngSubmit)="updateItem()">
+  <label for="name">Name:</label>
+  <input [(ngModel)]="item.name" name="name" required>
+  <button type="submit">Update</button>
+  <button (click)="deleteItem()" type="button">Delete</button>
+</form>
