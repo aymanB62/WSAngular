@@ -4,7 +4,7 @@ constructor(props) {
 super(props)
 }
 format(amount) {
-return parseFloat(amount).toFixed(2)
+return parseFloat(amount).toFixed(2) + ('$')
 }
 render() {
 return (

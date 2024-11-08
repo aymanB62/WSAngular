@@ -1,7 +1,10 @@
 import './App.css';
+import { ExpenseEntryList } from "./ExpenseEntryList";
 function App() {
 return (
-<h1>Hello React!</h1>
+<div className="App">
+      <ExpenseEntryList />
+    </div>
 );
 }
 export default App;
