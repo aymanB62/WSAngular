@@ -1,0 +1,19 @@
+This is a simple React.js application that implements a counter. 
+The user can increment or decrement the counter by clicking buttons. 
+This example demonstrates basic React concepts such as:
+- using the useState hook.
+- for buttons to change the state.
+- based on state values.
+
+import React from React;
+
+function increment(){
+	int number++;
+	return number;
+}
+function decrement(){
+	int number--;
+	return number;
+}
+
+function 

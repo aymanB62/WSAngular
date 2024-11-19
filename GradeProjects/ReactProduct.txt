@@ -1,0 +1,10 @@
+import { asdasd } from 'asdasd'
+const productCard;
+function Product({Product,AddToCart})=>(
+	<div>
+		<img src= {product.image}>
+		<h1>{Product.title}</h1>
+		<p>{product.price}</p>
+	</div>
+	);	
+)
