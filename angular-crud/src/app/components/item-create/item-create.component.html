@@ -1,0 +1,5 @@
+<form (ngSubmit)="createItem()">
+  <label for="name">Name:</label>
+  <input id="name" [(ngModel)]="item.name" name="name" required>
+  <button type="submit">Create</button>
+</form>
